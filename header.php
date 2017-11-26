@@ -15,38 +15,26 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<?php wp_head(); ?>
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
 </head>
 
 <body class="sticky-footer">
 
-	<a class="sr-only" href="#content"><?php echo 'Skip to content'; ?></a>
+	
 
 	<header id="masthead">
 
-		<?php
 
-		/* This theme supports custom logos — see functions.php — so we load the logo here. */
-		the_custom_logo();
+		<nav id="global-nav" class="global-nav sticky">
+			<button  class="menu-toggle">
+				<div class="container" onclick="myFunction(this)">
+  <div class="bar1"></div>
+  <div class="bar2"></div>
+  <div class="bar3"></div>
+</div>
 
-		/**
-		 * Check if we're on the homepage.
-		 *
-		 * If we're home, then display the site title with an <h1>, otherwise, display it with a <p>
-		 * so we can use the <h1> for the post or page title.
-		 */
-		if ( is_front_page() && is_home() ) : ?>
-			<h1>
-				<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a>
-			</h1>
-		<?php else : ?>
-			<p>
-				<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a>
-			</p>
-		<?php
-		endif; ?>
-
-		<nav id="global-nav" class="global-nav">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php echo 'Menu'; ?></button>
+	
+			</button>
 			<?php
 				/**
 				 * This creates a menu area that we can edit via the dashboard.
@@ -65,7 +53,7 @@
 	<?php
 		/**
 		 * Don't delete that div — it acts as an anchor for the skip-nav above.
-		 * We close it at the start of our footer.php fie.
+		 * We close it at the start of our footer.php file.
 		 */
 	?>
 	<div id="content">

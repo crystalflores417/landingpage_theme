@@ -444,6 +444,105 @@ template {
   display: none;
 }
 
+html {
+  font-family: "Lato", sans-serif;
+  color: #363f4f;
+}
+
+.title_font {
+  color: #fff;
+  font-size: 150px;
+}
+
+@media screen and (max-width: 480px) {
+  .title_font {
+    color: #fff;
+    font-size: 90px;
+    text-align: center;
+  }
+}
+.pages_title_font {
+  color: #fff;
+  font-size: 120px;
+  text-align: center;
+}
+
+@media screen and (max-width: 720px) {
+  .pages_title_font {
+    color: #fff;
+    font-size: 50px;
+    text-align: center;
+  }
+}
+.learn_title {
+  color: #04092d;
+  font-size: 70px;
+  font-family: "Lato", sans-serif, 900;
+}
+
+@media screen and (max-width: 900px) {
+  .learn_title {
+    color: #04092d;
+    font-size: 50px;
+  }
+}
+.setup_title {
+  color: #04092d;
+  font-size: 50px;
+  font-family: "Lato", sans-serif, 900;
+}
+
+@media screen and (max-width: 900px) {
+  .setup_title {
+    color: #04092d;
+    font-size: 30px;
+  }
+}
+.white {
+  color: #fff;
+}
+
+.p0 {
+  padding: 0;
+}
+
+.m5 {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+h1 {
+  color: #04092d;
+  font-size: 60px;
+}
+
+h2 {
+  color: #04092d;
+}
+
+h1 {
+  color: #04092d;
+}
+
+h1 {
+  color: #04092d;
+}
+
+h1 {
+  color: #04092d;
+}
+
+p {
+  color: #575858;
+  font-family: "Lato", sans-serif;
+  font-size: 18px;
+}
+
+.text_overlay {
+  color: #fff;
+  font-size: 30px;
+}
+
 .img-fluid {
   height: auto;
   max-width: 100%;
@@ -452,43 +551,61 @@ template {
 .global-nav {
   display: block;
   width: 100%;
+  position: fixed;
+  z-index: 99;
+  color: #04092d;
 }
 
 .global-nav ul {
   display: none;
   list-style: none;
   margin: 0;
-  padding-left: 0;
+  padding-left: 20px;
+  font-size: 20px;
 }
 
-.global-nav ul ul {
-  position: absolute;
-  top: 100%;
-  left: -999em;
-  z-index: 99999;
+button {
+  border: none;
+  border-radius: 12px;
+  color: white;
+  padding: 1px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 10px 5px;
+  cursor: pointer;
 }
 
-.global-nav ul ul ul {
-  top: 0;
-  left: -999em;
+.container_button {
+  display: inline-block;
+  cursor: pointer;
 }
 
-.global-nav ul ul li:hover > ul,
-.global-nav ul ul li.focus > ul {
-  left: 100%;
+.bar1, .bar2, .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.4s;
 }
 
-.global-nav ul ul a {
-  width: 200px;
+.change .bar1 {
+  -ms-transform: rotate(-45deg) translate(-9px, 6px);
+      transform: rotate(-45deg) translate(-9px, 6px);
 }
 
-.global-nav ul li:hover > ul,
-.global-nav ul li.focus > ul {
-  left: auto;
+.change .bar2 {
+  opacity: 0;
+}
+
+.change .bar3 {
+  -ms-transform: rotate(45deg) translate(-8px, -8px);
+      transform: rotate(45deg) translate(-8px, -8px);
 }
 
 .global-nav a {
   padding: 12px 8px;
+  color: #04092d;
 }
 
 .global-nav a {
@@ -500,6 +617,7 @@ template {
 .menu-toggle,
 .global-nav.toggled ul {
   display: block;
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 @media screen and (min-width: 640px) {
@@ -508,8 +626,7 @@ template {
   }
 
   .global-nav {
-    border-top: 1px solid #eaeaea;
-    border-bottom: 1px solid #eaeaea;
+    background-color: rgba(255, 255, 255, 0.5);
   }
 
   .global-nav ul {
@@ -521,6 +638,212 @@ template {
     margin-right: 8px;
   }
 }
+/**
+ * Content
+ */
+.background_image {
+  max-width: 100vw;
+  background-image: url(images/yellow_accent.png);
+  background-repeat: no-repeat;
+  background: cover;
+  position: relative;
+  z-index: 10;
+}
+
+.img-fluid {
+  /* Gets rid of the annoying gap on the bottom of images. */
+  width: 100%;
+  height: auto;
+}
+
+.quote {
+  position: absolute;
+  top: 250px;
+  /* Change the value and see what happens. */
+  left: 45px;
+  /* You can also use right/bottom instead of top/left. */
+}
+
+.name {
+  position: absolute;
+  top: 320px;
+  /* Change the value and see what happens. */
+  left: 45px;
+  /* You can also use right/bottom instead of top/left. */
+}
+
+/**
+ * Hero
+ */
+.hero {
+  position: relative;
+}
+
+/**
+ * The top/left property values are relative to the parent .hero.
+ * The parent must have position: relative for this to work, otherwise
+ * the absolutely positioned element will be place relative to the
+ * browser window itself. Watch, comment out position: relative on
+ * .hero above and see what happens.
+ */
+.hero__headline {
+  position: absolute;
+  top: 40px;
+  /* Change the value and see what happens. */
+  left: 30px;
+  /* You can also use right/bottom instead of top/left. */
+}
+
+/* This 'lil nugget makes our images responsive. */
+.img-fluid {
+  height: auto;
+  width: 100%;
+}
+
+/**
+ * Layout Styles
+ */
+/* Standard container, nothing fancy here. */
+.container {
+  margin: 0 auto;
+  padding: 0 24px;
+  max-width: 1000px;
+}
+
+/* The media objects will just stack by default with some y-axis margins. */
+.media {
+  margin: 24px 0;
+}
+
+/* At a screen width of 600px or above, we'll use CSS grids for layout. */
+@media screen and (min-width: 600px) {
+  .media {
+    display: -ms-grid;
+    display: grid;
+    -ms-flex-align: center;
+        align-items: center;
+    /* Flexbox align/justify, etc. props. work in grid too. */
+    grid-gap: 300px 60px;
+    /* Just our gutter. */
+    grid-template-areas: "image content";
+    /* We can reference these later... */
+    -ms-grid-columns: 2fr 3fr;
+        grid-template-columns: 2fr 3fr;
+    margin: 64px 0;
+    /* Larger margins for larger screens. */
+  }
+
+  /**
+   * Change the content/image placement on even media objects.
+   *
+   * This is called a pseudo-class. You can style specific child elements using
+   * it, but note that it will apply the style to any sibling tags, so a pattern
+   * of <p> <p> <p> <h2> <p> will include the <h2> in :nth-child(even).
+   *
+   * Use nth-of-type() if you want to only target siblings of the same type.
+   *
+   * https://developer.mozilla.org/en-US/docs/Web/CSS/:nth-child
+   */
+  .media:nth-child(even) {
+    grid-template-areas: "content image";
+    /* See how we swapped these? */
+    -ms-grid-columns: 2fr 1fr;
+        grid-template-columns: 2fr 1fr;
+    /* And these? */
+  }
+
+  .media__image {
+    grid-area: image;
+    /* This belongs in our image area, defined above...*/
+  }
+
+  .media__content {
+    grid-area: content;
+    /* This belongs in our content area, defined above...*/
+  }
+}
+.parallax {
+  /* The image used */
+  background-image: url("images/mainimage.jpg");
+  /* Set a specific height */
+  height: 100vh;
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Contact Form 7 Styles
+---------------------------------*/
+.wpcf7 {
+  max-width: 500px;
+  background-color: #04092d;
+  border: 1px solid #04092d;
+  padding: 20px;
+  color: #edbc71;
+  font-family: "Lato", sans-serif, 300;
+}
+
+.wpcf7-form {
+  margin-left: 25px;
+  margin-top: 25px;
+}
+
+.gform_button {
+  border-radius: 10px;
+  background-color: #04092d;
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+.contact-container {
+  display: inline-block;
+  max-width: 600px;
+  height: auto;
+  -ms-flex-pack: center;
+      justify-content: center;
+  margin-left: 50px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.contact-container-blurb {
+  display: inline-block;
+  max-width: 300px;
+  height: auto;
+  -ms-flex-pack: center;
+      justify-content: center;
+  margin-left: 50px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.background_image_team {
+  max-width: 100vw;
+  background-image: url(images/yellow_accent_2.png);
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.background_image_contact {
+  max-width: 100vw;
+  background-image: url(images/yellow_bg_3.png);
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.background_image_setup {
+  max-width: 100vw;
+  background-image: url(images/yellow_bg_4.png);
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.bg_white {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
 html {
   box-sizing: border-box;
 }
@@ -529,8 +852,151 @@ html {
   box-sizing: inherit;
 }
 
+/* Standard container, nothing fancy here. */
 .container {
-  max-width: 960px;
   margin: 0 auto;
-  padding: 0 12px;
+  padding: 0 24px;
+  max-width: 1000px;
+}
+
+footer {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  min-height: 30vh;
+}
+
+main,
+[role="main"],
+.main {
+  -ms-flex: 1;
+      flex: 1;
+}
+
+.container_footer {
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+.footer {
+  background: #04092d;
+  color: white;
+  padding: 24px 0;
+  text-align: center;
+  z-index: -99;
+}
+
+.footer p {
+  color: #fff;
+}
+
+.container_setup {
+  margin: 0 auto;
+  padding: 0 24px;
+  max-width: 1200px;
+}
+
+/* The media objects will just stack by default with some y-axis margins. */
+.mediasetup {
+  margin: 30px 0;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+/* At a screen width of 600px or above, we'll use CSS grids for layout. */
+@media screen and (min-width: 600px) {
+  .mediasetup {
+    display: -ms-grid;
+    display: grid;
+    -ms-flex-align: center;
+        align-items: center;
+    /* Flexbox align/justify, etc. props. work in grid too. */
+    grid-gap: 250px 50px;
+    /* Just our gutter. */
+    grid-template-areas: "image content";
+    /* We can reference these later... */
+    -ms-grid-columns: 1fr 4fr;
+        grid-template-columns: 1fr 4fr;
+    margin: 64px 0;
+    /* Larger margins for larger screens. */
+  }
+
+  /**
+   * Change the content/image placement on even media objects.
+   *
+   * This is called a pseudo-class. You can style specific child elements using
+   * it, but note that it will apply the style to any sibling tags, so a pattern
+   * of <p> <p> <p> <h2> <p> will include the <h2> in :nth-child(even).
+   *
+   * Use nth-of-type() if you want to only target siblings of the same type.
+   *
+   * https://developer.mozilla.org/en-US/docs/Web/CSS/:nth-child
+   */
+  .mediasetup:nth-child(even) {
+    grid-template-areas: "content image";
+    /* See how we swapped these? */
+    -ms-grid-columns: 4fr 1fr;
+        grid-template-columns: 4fr 1fr;
+    /* And these? */
+  }
+
+  .mediasetup__image {
+    grid-area: image;
+    /* This belongs in our image area, defined above...*/
+  }
+
+  .mediasetup__content {
+    grid-area: content;
+    /* This belongs in our content area, defined above...*/
+  }
+}
+/* Responsive Grid */
+@media screen and (min-width: 640px) {
+  .grid {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 24px;
+  }
+}
+/* Flex or Grid Aligners */
+.align-items-center {
+  -ms-flex-align: center;
+      align-items: center;
+}
+
+.align-self-center {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+/* Flex or Grid Aligners */
+.align-items-center {
+  -ms-flex-align: center;
+      align-items: center;
+}
+
+.align-self-center {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.team-up-container {
+  display: inline-block;
+  max-width: 400px;
+  height: auto;
+  -ms-flex-pack: center;
+      justify-content: center;
+  margin-left: 50px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.team-up-content {
+  width: 400px;
+  height: auto;
 }

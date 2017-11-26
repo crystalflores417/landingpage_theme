@@ -1,1 +1,148 @@
 // Styles for Typography
+
+
+
+html{
+	font-family: $font-family;
+	color: $font-p-color;
+	
+}
+
+
+// Headers
+.title_font{
+	color: $white;
+	font-size: 150px;
+	
+
+}
+
+
+
+@media screen and (max-width: 480px){
+	.title_font{
+	color: $white;
+	font-size: 90px;
+	text-align:center;
+	
+
+}
+
+}
+
+
+.pages_title_font{
+	color: $white;
+	font-size: 120px;
+	text-align:center;
+	
+
+}
+
+
+
+@media screen and (max-width: 720px){
+	.pages_title_font{
+	color: $white;
+	font-size: 50px;
+	text-align:center;
+	
+
+}
+
+}
+
+.learn_title{
+
+	color: $font-color;
+	font-size: 70px;
+	font-family: $font-900;
+
+}
+
+@media screen and (max-width: 900px){
+	.learn_title{
+	color: $font-color;
+	font-size: 50px;
+	
+
+}
+
+}
+
+
+
+.setup_title{
+
+	color: $font-color;
+	font-size: 50px;
+	font-family: $font-900;
+
+}
+
+@media screen and (max-width: 900px){
+	.setup_title{
+	color: $font-color;
+	font-size: 30px;
+	
+
+}
+
+}
+
+
+
+
+
+.white{
+	color:$white;
+}
+
+.p0{
+	padding:0;
+
+
+}
+
+.m5{
+	margin-top:5px;
+	margin-bottom:5px;
+
+}
+
+h1 {
+	color: $font-color;
+	font-size: 60px;
+
+}
+
+h2{
+	color: $font-color;
+}
+
+h1 {
+	color: $font-color;
+}
+
+h1 {
+	color: $font-color;
+}
+
+h1 {
+	color:$font-color;
+
+}
+
+// body text
+
+p {
+	color: $gray;
+	font-family: $font-family;
+	font-size:18px;
+}
+
+.text_overlay{
+	color: $white;
+	font-size:30px;
+
+}

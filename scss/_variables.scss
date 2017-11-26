@@ -2,7 +2,16 @@
 
 
 // Colors
-$gray: #eaeaea;
+$white: #fff;
+$gray: #575858;
+$black: #000000;
+$charcoal: #363f4f;
+$yellow: #edbc71;
+$light-blue: #c0e6ee;
+$medium-blue: #467694;
+$dark-blue: #04092d;
+
+
 
 // Spacer
 //
@@ -28,3 +37,16 @@ $spacer-2x-x: 16px;
 $spacer-3x: 32px;
 $spacer-3x-y: 32px;
 $spacer-3x-x: 32px;
+
+//type
+
+
+
+$font-family: 'Lato', sans-serif;
+$font-900: 'Lato', sans-serif, 900;
+$font-300: 'Lato', sans-serif, 300;
+$font-color: $dark-blue;
+$font-p-color: $charcoal;
+
+
+ 

@@ -1,1 +1,33 @@
 // Styles for Pages
+
+.background_image_team{
+  max-width: 100vw;
+  background-image: url(images/yellow_accent_2.png);
+  background-repeat: no-repeat;
+  
+  position:relative;
+ 
+}
+
+.background_image_contact{
+  max-width: 100vw;
+  background-image: url(images/yellow_bg_3.png);
+  background-repeat: no-repeat;
+  
+  position:relative;
+ 
+}
+
+
+.background_image_setup{
+  max-width: 100vw;
+  background-image: url(images/yellow_bg_4.png);
+  background-repeat: no-repeat;
+  
+  position:relative;
+ 
+}
+
+.bg_white{
+  background-color: rgba(255,255,255, 0.7);
+}

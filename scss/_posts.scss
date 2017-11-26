@@ -1,1 +1,67 @@
 // Styles for Posts
+
+
+
+ 
+
+
+/* Contact Form 7 Styles
+---------------------------------*/
+ 
+.wpcf7 {
+	max-width: 500px;
+ 
+background-color: $dark-blue;
+border: 1px solid  $dark-blue;
+
+padding:20px;
+color:$yellow;
+font-family: $font-300;
+ 
+}
+
+.wpcf7-form {
+ 
+margin-left: 25px;
+ 
+
+ 
+margin-top: 25px;
+}
+
+
+.gform_button{
+	border-radius: 10px;
+	background-color: $dark-blue;
+    border: 1px solid  $white;
+    color:$white;
+
+}
+
+.contact-container {
+    display:inline-block;
+   
+    max-width: 600px;
+    height:auto;
+    justify-content: center;
+    margin-left: 50px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+   
+      
+  }
+
+  .contact-container-blurb {
+    display:inline-block;
+   
+    max-width: 300px;
+    height:auto;
+    justify-content: center;
+    margin-left: 50px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+   
+      
+  }

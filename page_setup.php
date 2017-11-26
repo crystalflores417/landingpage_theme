@@ -1,5 +1,6 @@
 <?php
 /**
+ * Template Name: Setup
  * The template for displaying all pages
  *
  * This is the template that displays all pages by default.
@@ -13,13 +14,19 @@
 
 get_header(); ?>
 
-<main>
+<main class="background_image_setup">
+
+	<div class="hero my">
+    <img class="img-fluid hero__image" src="https://res.cloudinary.com/dx6e0lwrp/image/upload/v1511571016/light-1283795_1920_aologw.png">
+    <h1 class="hero__headline pages_title_font">GET STARTED</h1>
+  </div>
+
 
 	<?php
 	while ( have_posts() ) : the_post();
 
 		/* Get content-page.php */
-		get_template_part( 'template-parts/content', 'page' );
+		get_template_part( 'template-parts/content', 'setup' );
 
 		/* If comments are open or we have at least one comment, load up the comment template. */
 		if ( comments_open() || get_comments_number() ) :
@@ -35,5 +42,5 @@ get_header(); ?>
 </main>
 
 <?php
-get_sidebar();
+
 get_footer();

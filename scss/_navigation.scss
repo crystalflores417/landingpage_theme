@@ -3,43 +3,66 @@
 .global-nav {
     display: block;
     width: 100%;
+    position:fixed;
+    z-index:99;
+    color: $dark-blue;
+
+
 }
 
 .global-nav ul {
     display: none;
     list-style: none;
     margin: 0;
-    padding-left: 0;
+    padding-left: 20px;
+    font-size:20px
+
+    }
+
+button{
+   
+    border: none;
+    border-radius: 12px;
+    color: white;
+    padding: 1px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    
+    margin: 10px 5px;
+    cursor: pointer;
+
+
 }
 
-.global-nav ul ul {
-    position: absolute;
-        top: 100%;
-        left: -999em;
-        z-index: 99999;
+.container_button {
+    display: inline-block;
+    cursor: pointer;
 }
 
-.global-nav ul ul ul {
-    top: 0;
-    left: -999em;
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
 }
 
-.global-nav ul ul li:hover > ul,
-.global-nav ul ul li.focus > ul {
-    left: 100%;
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+    transform: rotate(-45deg) translate(-9px, 6px) ;
 }
 
-.global-nav ul ul a {
-    width: 200px;
-}
+.change .bar2 {opacity: 0;}
 
-.global-nav ul li:hover > ul,
-.global-nav ul li.focus > ul {
-    left: auto;
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+    transform: rotate(45deg) translate(-8px, -8px) ;
 }
 
 .global-nav a {
     padding: $spacer-15x-y $spacer-x;
+     color: $dark-blue;
 }
 
 .global-nav a {
@@ -51,6 +74,8 @@
 .menu-toggle,
 .global-nav.toggled ul {
     display: block;
+    background-color: rgba(255, 255, 255, .5)
+   
 }
 
 @media screen and (min-width: 640px) {
@@ -59,8 +84,7 @@
     }
 
     .global-nav {
-        border-top: 1px solid $gray;
-        border-bottom: 1px solid $gray;
+        background-color: rgba(255, 255, 255, .5);
     }
 
     .global-nav ul {
@@ -70,4 +94,9 @@
     .global-nav li {
         margin-right: $spacer-x;
     }
+
+
+
+
+
 }

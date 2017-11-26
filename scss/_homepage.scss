@@ -1,1 +1,138 @@
 // Styles for Homepage
+
+
+
+/**
+ * Content
+ */
+
+
+
+.background_image{
+  max-width: 100vw;
+  background-image: url(images/yellow_accent.png);
+  background-repeat: no-repeat;
+  background: cover;
+  position:relative;
+  z-index: 10;
+  
+
+}
+
+.img-fluid {
+   /* Gets rid of the annoying gap on the bottom of images. */
+ width:100%;
+ height:auto;
+
+ 
+}
+
+.quote{
+  position: absolute;
+    top: 250px; /* Change the value and see what happens. */
+    left: 45px; /* You can also use right/bottom instead of top/left. */
+}
+
+.name{
+  position: absolute;
+    top: 320px; /* Change the value and see what happens. */
+    left: 45px; /* You can also use right/bottom instead of top/left. */
+}
+/**
+ * Hero
+ */
+
+.hero {
+  position: relative;
+}
+
+/**
+ * The top/left property values are relative to the parent .hero.
+ * The parent must have position: relative for this to work, otherwise
+ * the absolutely positioned element will be place relative to the
+ * browser window itself. Watch, comment out position: relative on
+ * .hero above and see what happens.
+ */
+.hero__headline {
+  position: absolute;
+    top: 40px; /* Change the value and see what happens. */
+    left: 30px; /* You can also use right/bottom instead of top/left. */
+}
+
+
+
+
+/* This 'lil nugget makes our images responsive. */
+.img-fluid {
+  height: auto;
+  width: 100%;
+}
+
+
+/**
+ * Layout Styles
+ */
+
+/* Standard container, nothing fancy here. */
+.container {
+  margin: 0 auto;
+  padding: 0 24px;
+  max-width: 1000px;
+  
+}
+
+/* The media objects will just stack by default with some y-axis margins. */
+.media {
+  margin: 24px 0;
+}
+
+/* At a screen width of 600px or above, we'll use CSS grids for layout. */
+@media screen and (min-width: 600px) {
+  .media {
+    display: grid;
+      align-items: center; /* Flexbox align/justify, etc. props. work in grid too. */
+      grid-gap: 300px 60px; /* Just our gutter. */
+      grid-template-areas: "image content"; /* We can reference these later... */
+      grid-template-columns: 2fr 3fr;
+    margin: 64px 0; /* Larger margins for larger screens. */
+  }
+
+  /**
+   * Change the content/image placement on even media objects.
+   *
+   * This is called a pseudo-class. You can style specific child elements using
+   * it, but note that it will apply the style to any sibling tags, so a pattern
+   * of <p> <p> <p> <h2> <p> will include the <h2> in :nth-child(even).
+   *
+   * Use nth-of-type() if you want to only target siblings of the same type.
+   *
+   * https://developer.mozilla.org/en-US/docs/Web/CSS/:nth-child
+   */
+  .media:nth-child(even){
+    grid-template-areas: "content image"; /* See how we swapped these? */
+    grid-template-columns: 2fr 1fr; /* And these? */
+  }
+
+  .media__image {
+    grid-area: image; /* This belongs in our image area, defined above...*/
+  }
+
+  .media__content {
+    grid-area: content; /* This belongs in our content area, defined above...*/
+  }
+}
+
+
+.parallax { 
+    /* The image used */
+    background-image: url("images/mainimage.jpg");
+
+    /* Set a specific height */
+    height: 100vh; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
